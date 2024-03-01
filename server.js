@@ -6,7 +6,7 @@ const purchaseRoute = require("./router/purchase");
 const salesRoute = require("./router/sales");
 const cors = require("cors");
 const User = require("./models/users");
-const Product = require("./models/Product");
+// const Product = require("./models/Product");
 require("dotenv").config
 
 const app = express();
@@ -79,11 +79,11 @@ app.post("/api/register", (req, res) => {
 });
 
 
-app.get("/testget", async (req,res)=>{
-  const result = await Product.findOne({ _id: '6429979b2e5434138eda1564'})
-  res.json(result)
+// app.get("/testget", async (req,res)=>{
+//   const result = await Product.findOne({ _id: '6429979b2e5434138eda1564'})
+//   res.json(result)
 
-})
+// })
 
 // Here we are listening to the server
 app.listen(port, () => {
